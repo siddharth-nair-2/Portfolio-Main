@@ -4,7 +4,6 @@ import {
   creator,
   web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
@@ -13,16 +12,20 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
   nys,
   dq,
   ut,
   flow,
+  java,
+  cplus,
+  c,
+  mysql,
+  github,
+  postman,
+  admin,
+  arena,
+  weather,
+  shop,
 } from "../assets";
 
 export const navLinks = [
@@ -61,20 +64,28 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
+    name: "Java",
+    icon: java,
   },
   {
     name: "JavaScript",
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "C++",
+    icon: cplus,
+  },
+  {
+    name: "C",
+    icon: c,
+  },
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
   },
   {
     name: "React JS",
@@ -97,20 +108,20 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "MySql",
+    icon: mysql,
   },
   {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "GitHub",
+    icon: github,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Postman",
+    icon: postman,
   },
 ];
 
@@ -170,45 +181,104 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
 const projects = [
   {
-    name: "Car Rent",
+    name: "Arena Chat App",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Developed a live chat app using React and Express.js, featuring a secure login/signup system, real-time messaging with socket.io, and responsive design for seamless use across browsers.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
+        name: "node.js",
+        color: "green-text-gradient",
+      },
+      {
         name: "mongodb",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "chakra-ui",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "socket-io",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: arena,
+    host_link: "https://temp-arena-chat.herokuapp.com/",
+    source_code_link: "https://github.com/siddharth-nair-2/Arena-chat-app",
+  },
+  {
+    name: "FootyShop",
+    description:
+      "A dynamic e-commerce website created with React, Material-UI, Stripe, and Redux for a seamless user experience and secure payment processing, along with with intuitive navigation and responsive design.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "stripe",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "material-ui",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: shop,
+    host_link: "https://delightful-cascaron-a4fa91.netlify.app/",
+    source_code_link: "https://github.com/siddharth-nair-2/Ecommerce-Project",
+  },
+  {
+    name: "Admin Dashboard",
+    description:
+      "An efficient admin dashboard developed with React, Material-UI, Firebase, and Redux, delivering a seamless user experience and streamlined management of data and resources.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "material-ui",
+        color: "green-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: admin,
+    host_link: "https://luminous-mermaid-b5e898.netlify.app/login",
+    source_code_link: "https://github.com/siddharth-nair-2/Ecommerce-Project/tree/main/Admin",
+  },
+  {
+    name: "Weather App",
+    description:
+      "A sleek weather app built with React and Tailwind CSS, pulling data from APIs to provide accurate and up-to-date weather information in a user-friendly interface and easy searching.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "APIs",
         color: "green-text-gradient",
       },
       {
@@ -216,51 +286,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: weather,
+    host_link: "https://serene-zabaione-d5023e.netlify.app/",
+    source_code_link: "https://github.com/siddharth-nair-2/weather-app",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

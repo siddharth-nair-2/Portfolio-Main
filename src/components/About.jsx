@@ -51,7 +51,7 @@ const About = () => {
         YAML, Jquery, databases such as MySQL and MongoDB, as well as DevOps and
         version control tools.
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-20 justify-center">
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => {
           return (
             <ServiceCard key={service.title} index={index} service={service} />

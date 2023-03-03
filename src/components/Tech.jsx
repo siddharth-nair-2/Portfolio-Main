@@ -1,12 +1,53 @@
-import React from 'react'
-import { BallCanvas } from './canvas'
-import { SectionWrapper } from '../hoc'
-import { technologies } from '../constants'
+import React from "react";
+import Tilt from "react-tilt";
+import { textVariant } from "../utils/motion";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
+import { technologies } from "../constants";
+import { styles } from "../styles";
+
+const TechCard = ({ index, tech }) => {
+  return (
+    <Tilt className="xs:w-[150px] w-half">
+      <motion.div
+        variants={fadeIn("right", "spring", 0.2 * index, 0.75)}
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      >
+        <div
+          options={{ max: 45, scale: 1, speed: 450 }}
+          className="bg-tertiary rounded-[20px] py-5 px-12 h-[150px] flex justify-evenly items-center flex-col"
+        >
+          <img
+            src={tech.icon}
+            alt={tech.name}
+            className="w-16 h-16 object-contain"
+          />
+          <h3 className="text-white text-[12px] font-bold text-center">
+            {tech.name}
+          </h3>
+        </div>
+      </motion.div>
+    </Tilt>
+  );
+};
 
 const Tech = () => {
   return (
-    <div>Tech</div>
-  )
-}
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>
+          What I have worked with
+          <h2 className={styles.sectionHeadText}>Technologies.</h2>
+        </p>
+      </motion.div>
+      <div className="flex flex-row flex-wrap justify-center gap-10 mt-20 ">
+        {technologies.map((tech, index) => (
+          <TechCard key={`${tech.name} - ${tech.index}`} index={index} tech={tech} />
+        ))}
+      </div>
+    </>
+  );
+};
 
 export default SectionWrapper(Tech, "");
