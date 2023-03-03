@@ -34,12 +34,18 @@ const ServiceCard = ({ index, service }) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="sm:block hidden ">
         <p className={styles.sectionSubText}>
           Introduction
           <h2 className={styles.sectionHeadText}>Overview.</h2>
         </p>
       </motion.div>
+      <div className="sm:hidden">
+        <p className={styles.sectionSubText}>
+          Introduction
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+        </p>
+      </div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
