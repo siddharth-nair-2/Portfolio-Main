@@ -263,6 +263,10 @@ const projects = [
         name: "redux",
         color: "orange-text-gradient",
       },
+      {
+        name: "sass",
+        color: "pink-text-gradient",
+      },
     ],
     image: admin,
     host_link: "https://luminous-mermaid-b5e898.netlify.app/login",
@@ -284,6 +288,14 @@ const projects = [
       {
         name: "tailwind",
         color: "pink-text-gradient",
+      },
+      {
+        name: "pagination",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "luxon",
+        color: "blue-text-gradient",
       },
     ],
     image: weather,
