@@ -9,10 +9,9 @@ import { styles } from "../styles";
 
 const TechCard = ({ index, tech }) => {
   return (
-    <Tilt className="xs:w-[150px] w-half">
-      <motion.div
-        variants={fadeIn("right", "spring", 0.2 * index, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+    <Tilt className="xs:w-[150px] w-full">
+      <div
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card gap-25"
       >
         <div
           options={{ max: 45, scale: 1, speed: 450 }}
@@ -27,7 +26,7 @@ const TechCard = ({ index, tech }) => {
             {tech.name}
           </h3>
         </div>
-      </motion.div>
+      </div>
     </Tilt>
   );
 };
