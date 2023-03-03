@@ -34,12 +34,18 @@ const TechCard = ({ index, tech }) => {
 const Tech = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="sm:block hidden ">
         <p className={styles.sectionSubText}>
           What I have worked with
           <h2 className={styles.sectionHeadText}>Technologies.</h2>
         </p>
       </motion.div>
+      <div className="sm:hidden ">
+        <p className={styles.sectionSubText}>
+          What I have worked with
+          <h2 className={styles.sectionHeadText}>Technologies.</h2>
+        </p>
+      </div>
       <div className="flex flex-row flex-wrap justify-center gap-10 mt-20 ">
         {technologies.map((tech, index) => (
           <TechCard key={`${tech.name} - ${tech.index}`} index={index} tech={tech} />
